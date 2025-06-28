@@ -28,3 +28,5 @@ torch==2.3.0+cpu --index-url https://download.pytorch.org/whl/cpu
 
 langchain-cohere==0.1.0
 cohere==4.50
+
+sentence-transformers
