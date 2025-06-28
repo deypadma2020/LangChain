@@ -1,17 +1,24 @@
-# pip install langchain
+# LangChain and Extensions
 langchain
-# pip install -qU "langchain[anthropic]"
-langchain[anthropic]
-
-
-# pip install langchain-core langgraph>0.2.27
 langchain-core
+langchain[anthropic]
+langchain-anthropic
+langchain-google-genai
+langchain-huggingface
+
+# LangGraph
 langgraph>0.2.27
-# pip install -qU "langchain[anthropic]"
-langchain[anthropic]
 
+# Google Gemini (PaLM) Integration
+google-generativeai
 
-# pip install -U langgraph
-langgraph
-# pip install -qU "langchain[anthropic]" to call the model
-langchain[anthropic]
+# Hugging Face Integration
+transformers
+huggingface-hub
+
+# Environment Variable Management
+python-dotenv
+
+# Machine Learning Utilities
+numpy
+scikit-learn
