@@ -19,3 +19,5 @@ validate_template=True
 )
 
 template.save(r'PromptTemplate\template.json')
+
+## Used for single-string prompts. Ideal for simple, one-turn interactions like "Summarize this text: {input}".
