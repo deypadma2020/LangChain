@@ -15,6 +15,7 @@ class Review(TypedDict):
     name: Annotated[Optional[str], "Write the name of the reviewer"]
 
 structured_model = model.with_structured_output(Review)
+
 response = structured_model.invoke(
     """
 I recently upgraded to the Samsung Galaxy S24 Ultra, and I must say, it’s an absolute powerhouse! The Snapdragon 8 Gen 3 processor makes everything lightning fast—whether I’m gaming, multitasking, or editing photos. The 5000mAh battery easily lasts a full day even with heavy use, and the 45W fast charging is a lifesaver.
