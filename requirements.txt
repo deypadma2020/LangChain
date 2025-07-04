@@ -5,6 +5,7 @@ langchain[anthropic]
 langchain-anthropic
 langchain-google-genai
 langchain-huggingface
+langchain_huggingface
 
 # LangGraph
 langgraph>0.2.27
