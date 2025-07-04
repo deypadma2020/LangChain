@@ -1,7 +1,7 @@
 from langchain_anthropic import ChatAnthropic
 from dotenv import load_dotenv
 from langchain_core.prompts import PromptTemplate
-from langchain_core.output_parsers import PydanticOutputParser
+from langchain.output_parsers import PydanticOutputParser
 from pydantic import BaseModel, Field
 load_dotenv()
 
