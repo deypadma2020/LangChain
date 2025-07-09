@@ -1,8 +1,8 @@
-from langchain_anthropic import ChatAnthropic  # use new package
+from langchain_anthropic import ChatAnthropic
 from langchain.prompts import PromptTemplate
 from dotenv import load_dotenv
 
-load_dotenv()  # optional, if you're using a .env file for the API key
+load_dotenv()
 
 # Initialize the LLM
 llm = ChatAnthropic(model_name="claude-3-5-sonnet-20240620")  # note: use model_name instead of model
