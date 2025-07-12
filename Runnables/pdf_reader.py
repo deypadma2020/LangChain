@@ -41,3 +41,30 @@ answer = llm.invoke(prompt)
 
 # Print answer
 print("Answer:", answer)
+
+
+
+
+"""---
+
+**PDF Query Application with ChromaDB and LLM**
+
+This application allows users to query the contents of a PDF file using semantic search and an LLM (Large Language Model). The workflow includes:
+
+1. **PDF Ingestion & Processing**
+   The application reads and splits the PDF into manageable text chunks using a recursive text splitter.
+
+2. **Embedding & Storage**
+   Each chunk is converted into vector embeddings using Hugging Face models and stored in **ChromaDB**, a persistent vector store.
+
+3. **Semantic Search**
+   When a user submits a question, the application retrieves semantically relevant chunks from the ChromaDB vector store.
+
+4. **LLM Response Generation**
+   The retrieved text chunks are passed to an LLM (e.g., Claude or GROQ's models) along with the user's question. The LLM generates a concise, context-aware answer.
+
+This pipeline enables intelligent, natural language querying of PDF documents with precise and relevant answers.
+
+---
+
+"""
