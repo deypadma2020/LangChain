@@ -1,5 +1,4 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain_anthropic import ChatAnthropic
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain.schema.runnable import RunnableSequence, RunnableParallel, RunnablePassthrough, RunnableLambda
@@ -16,10 +15,17 @@ model = ChatGoogleGenerativeAI(model="gemini-2.0-flash-001")
 
 parser = StrOutputParser()
 
+joke_generation_chain = RunnableSequence(prompt, model, parser)
+
+# parallel_chain = RunnableParallel(
+#     {
+#         'joke': RunnablePassthrough(),
+#         'word_count': RunnableLambda(lambda x: len(x.split()))
+#     }
+# )
+
 def word_count(text):
     return len(text.split())
-
-joke_generation_chain = RunnableSequence(prompt, model, parser)
 
 parallel_chain = RunnableParallel(
     {
