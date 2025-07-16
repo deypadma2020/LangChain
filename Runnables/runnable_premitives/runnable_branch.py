@@ -2,7 +2,7 @@ from langchain_groq import ChatGroq
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
-from langchain.schema.runnable import RunnableSequence, RunnableParallel, RunnablePassthrough, RunnableLambda, RunnableBranch
+from langchain.schema.runnable import RunnableSequence, RunnablePassthrough, RunnableLambda,RunnableBranch
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -22,7 +22,7 @@ model2 = ChatGoogleGenerativeAI(model="gemini-2.0-flash-001")
 
 parser = StrOutputParser()
 
-report_generation_chain = prompt1 | model1 | parser
+report_generation_chain = RunnableSequence(prompt1, model1, parser)
 
 branch_chain = RunnableBranch(
     (
@@ -31,6 +31,26 @@ branch_chain = RunnableBranch(
     ),
     RunnablePassthrough()
 )
+
+# branch_chain = RunnableBranch(
+#     (
+#         RunnableLambda(lambda x: len(x.split()) > 300), 
+#         RunnableSequence(prompt2, model2, parser)
+#     ),
+#     RunnablePassthrough()
+# )
+
+
+# def word_count_check(text):
+#     return len(text.split()) > 300
+
+# branch_chain = RunnableBranch(
+#     (
+#         RunnableLambda(lambda x: word_count_check(x)), 
+#         RunnableSequence(prompt2, model2, parser)
+#     ),
+#     RunnablePassthrough()
+# )
 
 final_chain = RunnableSequence(report_generation_chain, branch_chain)
 
