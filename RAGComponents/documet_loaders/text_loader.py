@@ -26,4 +26,15 @@ response = chain.invoke(
 )
 
 print(response)
+print()
 
+print(f"type of the docs - {type(docs)}")
+print()
+print(f"type of the docs - {type(docs[0])}")
+print()
+print(f"lenght of the doc file -{len(docs)}")
+print()
+print(f"Metadata - {docs[0].metadata}")
+print()
+print(f"page raw content - {docs[0].page_content}")
+print()
