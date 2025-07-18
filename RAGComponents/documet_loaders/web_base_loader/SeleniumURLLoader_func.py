@@ -1,7 +1,7 @@
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
+from selenium import webdriver # type: ignore
+from selenium.webdriver.chrome.options import Options # type: ignore
+from selenium.webdriver.chrome.service import Service # type: ignore
+from webdriver_manager.chrome import ChromeDriverManager # type: ignore
 
 from langchain_core.documents import Document
 from langchain_google_genai import ChatGoogleGenerativeAI
