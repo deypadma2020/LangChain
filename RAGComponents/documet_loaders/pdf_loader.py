@@ -53,3 +53,11 @@ print(response)
 # print()
 
 # print(docs[0].metadata)
+
+"""
+simple clean pdf - PyPDFLoader
+PDFs with tables/columns - PDFPlumnberLoader
+Scanned/Image PDFs - UnstructuredPDFLoader/AmazonTextractLoader
+Need layout and image data - PyMuPDFLoader
+Want best structure extraction - UnstructuredPDFLoader
+"""
