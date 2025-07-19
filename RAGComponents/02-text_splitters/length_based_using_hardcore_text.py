@@ -40,4 +40,10 @@ splitter = CharacterTextSplitter(
 
 result = splitter.split_text(text)
 
+print(len(result))
+print()
+
 print(result)
+print()
+
+print(result[0])
