@@ -1,5 +1,4 @@
 from langchain_community.vectorstores import Chroma
-from langchain_anthropic import ChatAnthropic
 from langchain_huggingface import HuggingFaceEndpointEmbeddings
 from langchain_core.documents import Document
 from dotenv import load_dotenv
