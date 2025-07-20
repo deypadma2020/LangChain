@@ -194,8 +194,12 @@ cython_debug/
 .cursorindexingignore
 
 langchain_venv/
-RAGComponents\04-retrievers\vectorstore
-RAGComponents\03-vector_store\chromadb_store\my_chroma_db
-RAGComponents\03-vector_store\faiss_store\faiss_ipl_index
-RAGComponents\03-vector_store\faiss_store\faiss_ipl_index_pruned
-RAGComponents\03-vector_store\faiss_store\faiss_ipl_index_updated
+# Ignore FAISS index folders
+RAGComponents/03-vector_store/faiss_store/
+
+# Ignore Chroma DB
+RAGComponents/04-retrievers/vectorstore/chroma_store/
+RAGComponents/04-retrievers/vectorstore/chroma.sqlite3
+
+# Ignore FAISS index in retrievers
+RAGComponents/04-retrievers/vectorstore/faiss_store/
