@@ -42,9 +42,12 @@ similarity_retriever = vectorstore.as_retriever(
     search_kwargs={"k": 5}
 )
 
+base_retriever = vectorstore.as_retriever(search_kwargs={"k": 5})
+model = ChatAnthropic(model="claude-3-5-sonnet-20240620")
+
 multiquery_retriever = MultiQueryRetriever.from_llm(
-    retriever=vectorstore.as_retriever(search_kwargs={"k": 5}),
-    llm=ChatAnthropic(model="claude-3-5-sonnet-20240620"),
+    retriever=base_retriever,
+    llm=model,
 )
 
 query = "How to improve energy levels and maintain balance?"
