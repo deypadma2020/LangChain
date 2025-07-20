@@ -8,5 +8,5 @@ response_docs = retriever.invoke(query)
 
 for i, doc in enumerate(response_docs):
     print(f"\n--- Response {i+1} ---")
-    print(f"Content:\n{doc.metadata}...")
+    print(f"Content:\n{doc.metadata}...\n")
     print(f"Content:\n{doc.page_content}...")
