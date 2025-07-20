@@ -20,7 +20,7 @@ vectorstore = Chroma.from_documents(
     documents=documents_,
     embedding=embedding_model,
     collection_name="my_collection",  
-    persist_directory=r"RAGComponents\04-retrievers\vectorstore"  
+    persist_directory=r"RAGComponents\04-retrievers\vectorstore\chroma_store"  
 )
 
 
