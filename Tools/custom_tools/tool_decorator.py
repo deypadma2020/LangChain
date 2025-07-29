@@ -16,7 +16,7 @@ def addition(a: int, b: int) -> int:
 
 # step 3 - add tool decorator
 @tool
-def addition(a,b):
+def addition(a: int, b: int) -> int:
     '''
     Addition of two real numbers
     '''
