@@ -7,7 +7,7 @@ class AdditionInput(BaseModel):
 
 def addition(a: int, b: int) -> int:
     '''
-    Addition of two real numbers
+    Addition of two real integer numbers
     '''
     return a + b
 
