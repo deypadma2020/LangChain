@@ -3,14 +3,14 @@ from langchain_core.tools import tool
 # step 1 - create a function
 def addition(a,b):
     '''
-    Addition of two real numbers
+    Addition of two real integer numbers
     '''
     return a + b
 
 # step 2 - add type hints
 def addition(a: int, b: int) -> int:
     '''
-    Addition of two real numbers
+    Addition of two real integer numbers
     '''
     return a + b
 
@@ -18,7 +18,7 @@ def addition(a: int, b: int) -> int:
 @tool
 def addition(a: int, b: int) -> int:
     '''
-    Addition of two real numbers
+    Addition of two real integer numbers
     '''
     return a + b
 
