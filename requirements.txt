@@ -20,7 +20,10 @@ cohere==5.15.0
 colorama==0.4.6
 coloredlogs==15.0.1
 dataclasses-json==0.6.7
+ddgs==9.4.3
+defusedxml==0.7.1
 distro==1.9.0
+duckduckgo_search==8.1.1
 durationpy==0.10
 faiss-cpu==1.11.0
 fastavro==1.11.1
@@ -77,6 +80,7 @@ langgraph-checkpoint==2.1.0
 langgraph-prebuilt==0.5.1
 langgraph-sdk==0.1.72
 langsmith==0.4.4
+lxml==6.0.0
 markdown-it-py==3.0.0
 MarkupSafe==2.1.5
 marshmallow==3.26.1
@@ -104,6 +108,7 @@ packaging==24.2
 pandas==2.3.0
 pillow==11.2.1
 posthog==5.4.0
+primp==0.15.0
 propcache==0.3.2
 proto-plus==1.26.1
 protobuf==5.29.5
@@ -172,5 +177,6 @@ wheel==0.45.1
 wikipedia==1.4.0
 xxhash==3.5.0
 yarl==1.20.1
+youtube-transcript-api==0.6.1
 zipp==3.23.0
 zstandard==0.23.0
