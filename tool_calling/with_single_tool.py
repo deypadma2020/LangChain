@@ -51,3 +51,28 @@ actual_structured_response = addition.invoke(tool_call_response.tool_calls[0])
 print("formatted User query response: \n", actual_structured_response)
 print()
 
+
+
+# ---------------------- invoke tool message into llm ----------------------
+from langchain_core.messages import HumanMessage
+
+query = HumanMessage("Can you make a addition 2 with 3?")
+messages = [query]
+print(messages)
+print()
+
+response = llm_with_tools.invoke(messages)
+messages.append(response)
+print(messages)
+print()
+
+tool_response = addition.invoke(response.tool_calls[0])
+messages.append(tool_response)
+print(messages)
+print()
+
+final_response = llm_with_tools.invoke(messages)
+print(final_response)
+print()
+
+print(final_response.content)
