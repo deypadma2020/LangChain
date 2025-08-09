@@ -7,8 +7,6 @@ import requests
 import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
-
-# Load environment variables
 load_dotenv()
 
 # --- Tool Definitions ---
